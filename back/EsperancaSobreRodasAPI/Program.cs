@@ -1,4 +1,5 @@
 
+using System.Reflection;
 using EsperancaSobreRodasAPI.Data;
 using EsperancaSobreRodasAPI.Repositories.Interface;
 using EsperancaSobreRodasAPI.Repositories;
@@ -26,7 +27,7 @@ namespace EsperancaSobreRodasAPI
             builder.Services.AddSwaggerGen(
                 x =>
                 {
-                    //Define tipo de autenticação
+                    //Define tipo de autenticaï¿½ï¿½o
                     x.SwaggerDoc("v1", new OpenApiInfo { Title = "EsperancaSobreRodasAPI", Version = "v1" });
                     x.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
                     {
@@ -81,6 +82,16 @@ namespace EsperancaSobreRodasAPI
 
             builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
             builder.Services.AddScoped<IMotoristaRepository, MotoristaRepository>();
+            
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll", builder =>
+                {
+                    builder.AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader();
+                });
+            });
 
             var app = builder.Build();
 
@@ -89,6 +100,7 @@ namespace EsperancaSobreRodasAPI
             {
                 app.UseSwagger();
                 app.UseSwaggerUI();
+                app.UseCors("AllowAll");
             }
 
             app.UseHttpsRedirection();

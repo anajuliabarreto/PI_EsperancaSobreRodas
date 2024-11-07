@@ -9,11 +9,10 @@ namespace EsperancaSobreRodasAPI.Data.Map
         public void Configure(EntityTypeBuilder<UsuarioModel> builder)
         {
             builder.HasKey(x => x.Id);
-            builder.Property(x => x.NomePaciente);
-            builder.Property(x => x.TipoUsuario).IsRequired();
-            builder.Property(x => x.NomeUsuario).IsRequired();
+            builder.Property(x => x.Id).ValueGeneratedOnAdd();
+            builder.Property(x => x.NomePaciente).IsRequired();
+            builder.Property(x => x.EmailUsuario).IsRequired();
             builder.Property(x => x.SenhaUsuario).IsRequired();
-            builder.Property(x => x.TelefoneUsuario).IsRequired();
         }
     }
 }
