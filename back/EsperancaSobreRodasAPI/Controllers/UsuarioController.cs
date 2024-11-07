@@ -37,17 +37,18 @@ namespace EsperancaSobreRodasAPI.Controllers
 
         [AllowAnonymous]
         [HttpPost]
-        public async Task<ActionResult<UsuarioModel>> Cadastrar([FromBody] UsuarioModel usuarioModel)
+        public async Task<ActionResult<UsuarioModel>> Cadastrar([FromBody] CriarUsuarioDTO criarUsuarioDTO)
         {
-            UsuarioModel usuario = await _usuarioRepository.Cadastrar(usuarioModel);
+            UsuarioModel usuario = await _usuarioRepository.Cadastrar(criarUsuarioDTO.toModel());
+            
             return Ok(usuario);
         }                
 
         [AllowAnonymous]
         [HttpGet("token")]
-        public async Task<ActionResult<UsuarioComToken>> BuscarToken([FromQuery] int id, [FromQuery] string senhaUsuario)
+        public async Task<ActionResult<UsuarioComToken>> BuscarToken([FromQuery] string emailUsuario, [FromQuery] string senhaUsuario)
         {            
-            var usuario = await _usuarioRepository.BuscarPorId(id);
+            var usuario = await _usuarioRepository.BuscarPorEmail(emailUsuario);
 
             if (usuario == null)
             {

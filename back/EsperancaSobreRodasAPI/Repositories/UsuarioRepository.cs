@@ -19,6 +19,12 @@ namespace EsperancaSobreRodasAPI.Repositories
                 return await _dbContext.Usuarios.FirstOrDefaultAsync(x => x.Id == id);
             }
 
+            public Task<UsuarioModel> BuscarPorEmail(string email)
+            {
+                UsuarioModel usuario = _dbContext.Usuarios.FirstOrDefault(x => x.EmailUsuario == email);
+                
+                return Task.FromResult(usuario);
+            }
             public async Task<List<UsuarioModel>> BuscarTodosUsuarios()
             {
                 return await _dbContext.Usuarios.ToListAsync();
@@ -40,11 +46,9 @@ namespace EsperancaSobreRodasAPI.Repositories
                     throw new Exception($"Usuário referente ao ID: {id} não foi encontrado");
                 }
 
-                usuarioPorId.NomeUsuario = usuario.NomeUsuario;
-                usuarioPorId.TipoUsuario = usuario.TipoUsuario;
                 usuarioPorId.NomePaciente = usuario.NomePaciente;
+                usuarioPorId.EmailUsuario = usuario.EmailUsuario;
                 usuarioPorId.SenhaUsuario = usuario.SenhaUsuario;
-                usuarioPorId.TelefoneUsuario = usuario.TelefoneUsuario;
 
                 _dbContext.Usuarios.Update(usuarioPorId);
                 await _dbContext.SaveChangesAsync();

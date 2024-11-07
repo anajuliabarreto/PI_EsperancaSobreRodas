@@ -62,22 +62,15 @@ namespace EsperancaSobreRodasAPI.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("NomePaciente")
+                    b.Property<string>("EmailUsuario")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("NomeUsuario")
+                    b.Property<string>("NomePaciente")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SenhaUsuario")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TelefoneUsuario")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TipoUsuario")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
