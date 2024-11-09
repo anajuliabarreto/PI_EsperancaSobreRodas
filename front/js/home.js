@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
         // Se houver token, exibir mensagem de boas-vindas
         const welcomeMessage = document.querySelector("#welcome-message");
-        welcomeMessage.textContent = "Bem-vindo! Você está logado.";
+        welcomeMessage.textContent = "Você está logado.";
     }
 
     // Logout

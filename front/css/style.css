@@ -42,6 +42,7 @@ body {
 }
 .title-primary {
     color: #fff;
+    padding: 5px;
 }
 .title-second {
     color: #58af9b;
@@ -75,6 +76,8 @@ body {
     background-color: transparent;
     border: 1px solid #fff;
     transition: background-color .5s;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
 }
 .btn-primary:hover {
     background-color: #fff;
@@ -93,6 +96,17 @@ body {
 .first-content {
     display: flex;
 }
+
+.logoInicio{
+    width: 200px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.logoLogin{
+    width: 150px;
+}
+
 .first-content .second-column {
     z-index: 11;
 }
