@@ -9,15 +9,20 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
         // Se houver token, exibir mensagem de boas-vindas
         const welcomeMessage = document.querySelector("#welcome-message");
-        welcomeMessage.textContent = "Você está logado.";
+
+        if (welcomeMessage) welcomeMessage.textContent = "Você está logado.";
     }
 
-    // Logout
+    // Logout - Confirmação antes de deslogar
+
     const logoutBtn = document.querySelector("#logout-btn");
+
     logoutBtn.addEventListener("click", function () {
-        // Remover o token e redirecionar para a página de login
-        localStorage.removeItem("authToken");
-        alert("Você foi deslogado.");
-        window.location.href = "index.html"; // Ajuste o nome do arquivo de login se necessário
+        const confirmed = confirm("Deseja realmente sair?");
+
+        if (confirmed) {
+            localStorage.removeItem("authToken");
+            window.location.href = "index.html"; // Ajuste o nome do arquivo de login se necessário
+        }
     });
 });

@@ -11,13 +11,26 @@
 .content {
     background-color: #fff;
     border-radius: 15px;
-    width: 1000px;
-    height: 400px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    width: 1000px;
+    height: 600px;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     position: relative;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.content-header {
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 0;
+    width: 90%;
+    position: absolute;
 }
 
 .first-column {
@@ -46,24 +59,208 @@
     font-size: 20px;
 }
 
+
+.card-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #58af9b;
+    border-radius: 12px;
+    width: 10rem;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: inherit; /* Herda a cor do texto */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-size: 1.2rem; /* Ajustei o tamanho do texto */
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo do tooltip */
+.tooltip {
+    visibility: hidden; /* Inicialmente invisível */
+    background-color: #333; /* Cor de fundo do tooltip */
+    color: #fff; /* Cor do texto do tooltip */
+    text-align: center;
+    border-radius: 4px;
+    padding: 0.5rem;
+    position: absolute;
+    bottom: 120%; /* Posicionado acima do card */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8rem;
+    white-space: nowrap; /* Impede quebra de linha */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Triângulo do tooltip */
+.tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%; /* Base do triângulo alinhada ao tooltip */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent; /* Triângulo com base preta */
+}
+
+/* Mostrar o tooltip ao passar o mouse */
+.card:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
 .project-name {
     font-weight: bold;
     color: #58af9b;
 }
 
-.btn-primary {
-    background-color: transparent;
-    border: 1px solid #58af9b;
-    color: #58af9b;
-    padding: 10px 30px;
-    border-radius: 15px;
+.btn {
+    padding: 0.75rem;
     font-size: 14px;
     font-weight: bold;
+    border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
-.btn-primary:hover {
+.btn-primary {
     background-color: #58af9b;
     color: #fff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #45a089;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #58af9b;
+    border: 1px solid #58af9b;
+}
+
+.btn-secondary:hover {
+    background-color: #58af9b;
+    color: #fff;
+}
+
+.motoristas-table, .usuarios-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 1rem;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.motoristas-table thead,
+.usuarios-table thead {
+    background-color: #58af9b;
+    color: #fff;
+}
+
+.motoristas-table th,
+.motoristas-table td,
+.usuarios-table th,
+.usuarios-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.motoristas-table th, .usuarios-table th {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.motoristas-table tbody tr:nth-child(even), .usuarios-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.motoristas-table tbody tr:hover, .usuarios-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.motoristas-table td, .usuarios-table td {
+    color: #34495e;
+}
+
+
+
+.action-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn-action {
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-action.update {
+    background-color: #ffc107;
+    color: #fff;
+}
+
+.btn-action.update:hover {
+    background-color: #e0a800;
+}
+
+.btn-action.delete {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.btn-action.delete:hover {
+    background-color: #bd2130;
+}
+
+.btn-primary {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #58af9b;
+    color: #fff;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #45a089;
 }
