@@ -72,10 +72,21 @@ namespace EsperancaSobreRodasAPI.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<ActionResult<UsuarioModel>> Atualizar([FromBody] UsuarioModel usuarioModel, int id)
+        public async Task<ActionResult<UsuarioModel>> Atualizar([FromBody] CriarUsuarioDTO usuarioModel, int id)
         {
-            usuarioModel.Id = id;
-            UsuarioModel usuario = await _usuarioRepository.Atualizar(usuarioModel, id);
+            UsuarioModel usuario = await _usuarioRepository.BuscarPorId(id);
+            
+            if (usuario == null)
+            {
+                return NotFound(new { mensagem = "Usuário não encontrado" });
+            }
+            
+            usuario.NomePaciente = usuarioModel.NomePaciente ?? usuario.NomePaciente;
+            usuario.EmailUsuario = usuarioModel.EmailUsuario ?? usuario.EmailUsuario;
+            usuario.SenhaUsuario = usuarioModel.SenhaUsuario ?? usuario.SenhaUsuario;
+            
+            usuario = await _usuarioRepository.Atualizar(usuario, id);
+            
             return Ok(usuario);
         }
 
