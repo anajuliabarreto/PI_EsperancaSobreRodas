@@ -1,26 +1,51 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-    <link rel="stylesheet" href="css/home.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/home.css" />
+  </head>
+  <body>
     <div class="container">
-        <div class="content">
-            <div class="first-column">
-                <h2 class="title title-primary">Seja bem-vindo!</h2>
-                <p class="description description-primary" id="welcome-message">Carregando...</p>
-                <p class="fraseHome"><span class="project-name">Esperança sobre Rodas</span> um sistema de transporte solidário e seguro para crianças em tratamento, conectando voluntários e famílias em uma rede de apoio</p>               
-                
-                <button id="logout-btn" class="btn btn-primary">Logout</button>
-            </div>
-            <div>
-                
-            </div>
+      <div class="content">
+        <div class="content-header">
+          <button id="logout-btn" class="btn btn-secondary">Sair</button>
         </div>
+        <h2 class="title title-primary">Seja bem-vindo!</h2>
+        <p class="description description-primary" id="welcome-message">
+          Carregando...
+        </p>
+        <p class="fraseHome">
+          <span class="project-name">Esperança sobre Rodas</span> um sistema de
+          transporte solidário e seguro para crianças em tratamento, conectando
+          voluntários e famílias em uma rede de apoio.
+        </p>
+
+        <div class="card-list">
+          <a
+            class="card"
+            href="/motoristas.html"
+            aria-label="Ir para a página de Motoristas"
+          >
+            <h3 class="card-title">Motoristas</h3>
+            <span class="tooltip"
+              >Clique aqui para ir até a página de motoristas</span
+            >
+          </a>
+          <a
+            class="card"
+            href="/usuarios.html"
+            aria-label="Ir para a página de Usuários"
+          >
+            <h3 class="card-title">Usuários</h3>
+            <span class="tooltip"
+              >Clique aqui para ir até a página de usuários</span
+            >
+          </a>
+        </div>
+      </div>
     </div>
     <script src="js/home.js"></script>
-</body>
+  </body>
 </html>
