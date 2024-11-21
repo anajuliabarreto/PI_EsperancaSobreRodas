@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Motoristas</title>
+    <link rel="stylesheet" href="css/home.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <div class="content-header">
+          <a href="/home.html">
+            <button class="btn btn-secondary">Voltar</button>
+          </a>
+          <button id="add-motorista-btn" class="btn btn-primary">
+            Criar Motorista
+          </button>
+        </div>
+        <div class="motoristas-section">
+          <h3 class="title-secondary">Lista de Motoristas</h3>
+          <table id="motoristas-table" class="motoristas-table">
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>Placa</th>
+                <th>Telefone</th>
+                <th>Documento</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- As linhas serão preenchidas dinamicamente -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="js/home.js"></script>
+    <script src="js/motoristas.js"></script>
+  </body>
+</html>
