@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atualizar Usuário</title>
+    <link rel="stylesheet" href="css/form.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-wrapper">
+        <h1 class="form-title">Atualizar Usuário</h1>
+        <form id="update-form" class="form">
+          <div class="form-group">
+            <label for="nome">Nome</label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder="Digite o nome completo"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Digite o email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="senha">Senha</label>
+            <input
+              type="password"
+              id="senha"
+              name="senha"
+              placeholder="Digite a nova senha"
+            />
+          </div>
+          <button id="update-submit" class="btn btn-primary">
+            Salvar Alterações
+          </button>
+          <button type="button" id="cancel-btn" class="btn btn-secondary">
+            Cancelar
+          </button>
+        </form>
+      </div>
+    </div>
+    <script src="js/atualizar-usuario.js"></script>
+  </body>
+</html>
