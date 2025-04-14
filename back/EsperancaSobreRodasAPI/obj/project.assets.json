@@ -4248,25 +4248,31 @@
     ]
   },
   "packageFolders": {
-    "/home/reislucaz/.nuget/packages/": {}
+    "C:\\Users\\breno\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/reislucaz/apps/vitoria-mel/PI_EsperancaSobreRodas/back/EsperancaSobreRodasAPI/EsperancaSobreRodasAPI.csproj",
+      "projectUniqueName": "C:\\Users\\breno\\Source\\Repos\\PI_EsperancaSobreRodas\\back\\EsperancaSobreRodasAPI\\EsperancaSobreRodasAPI.csproj",
       "projectName": "EsperancaSobreRodasAPI",
-      "projectPath": "/home/reislucaz/apps/vitoria-mel/PI_EsperancaSobreRodas/back/EsperancaSobreRodasAPI/EsperancaSobreRodasAPI.csproj",
-      "packagesPath": "/home/reislucaz/.nuget/packages/",
-      "outputPath": "/home/reislucaz/apps/vitoria-mel/PI_EsperancaSobreRodas/back/EsperancaSobreRodasAPI/obj/",
+      "projectPath": "C:\\Users\\breno\\Source\\Repos\\PI_EsperancaSobreRodas\\back\\EsperancaSobreRodasAPI\\EsperancaSobreRodasAPI.csproj",
+      "packagesPath": "C:\\Users\\breno\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\breno\\Source\\Repos\\PI_EsperancaSobreRodas\\back\\EsperancaSobreRodasAPI\\obj\\",
       "projectStyle": "PackageReference",
-      "UsingMicrosoftNETSdk": false,
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/home/reislucaz/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\breno\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -4284,7 +4290,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net8.0": {
@@ -4346,7 +4353,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/home/reislucaz/.dotnet/sdk/8.0.403/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

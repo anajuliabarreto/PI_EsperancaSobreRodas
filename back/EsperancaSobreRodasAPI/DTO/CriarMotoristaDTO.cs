@@ -4,7 +4,7 @@ namespace EsperancaSobreRodasAPI.DTO;
 
 public class CriarMotoristaDTO
 {
-
+    public int Id { get; set; }
     public string NumeroPlaca { get; set; }
     public string NomeMotorista { get; set; }
     public string SenhaMotorista { get; set; }
@@ -15,6 +15,7 @@ public class CriarMotoristaDTO
     {
         return new MotoristaModel
         {
+            Id = Id,
             NumeroPlaca = this.NumeroPlaca,
             NomeMotorista = this.NomeMotorista,
             SenhaMotorista = this.SenhaMotorista,
