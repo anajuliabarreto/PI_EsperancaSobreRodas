@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+# ATT
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
