@@ -13,7 +13,6 @@ namespace EsperancaSobreRodasAPI.Repositories
             _dbContext = espSobreRodasDBContext;
         }
 
-
         public async Task<MotoristaModel> BuscarPorId(int id)
         {
             return await _dbContext.Motoristas.FirstOrDefaultAsync(x => x.Id == id);
