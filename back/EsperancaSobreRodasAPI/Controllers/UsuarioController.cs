@@ -78,7 +78,7 @@ namespace EsperancaSobreRodasAPI.Controllers
             
             if (usuario == null)
             {
-                return NotFound(new { mensagem = "Usuário não encontrado" });
+                return NotFound(new { mensagem = "Usuário não foi encontrado" });
             }
             
             usuario.NomePaciente = usuarioModel.NomePaciente ?? usuario.NomePaciente;

@@ -9,7 +9,6 @@ namespace EsperancaSobreRodasAPI.Data
         public EsperancaSobreRodasDBContext(DbContextOptions<EsperancaSobreRodasDBContext> options) : base(options)
         {
         }
-
         public DbSet<UsuarioModel> Usuarios { get; set; }
         public DbSet<MotoristaModel> Motoristas { get; set; }
 

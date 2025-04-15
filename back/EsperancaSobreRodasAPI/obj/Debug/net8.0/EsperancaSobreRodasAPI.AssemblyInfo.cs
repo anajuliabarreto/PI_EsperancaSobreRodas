@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EsperancaSobreRodasAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+111dc6a067bce7c3429e1236c095206c24e4e35a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+980ebcb373bee85312a84cc269fc46e0450fdcbe")]
 [assembly: System.Reflection.AssemblyProductAttribute("EsperancaSobreRodasAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EsperancaSobreRodasAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cVKlYPgqESU=",
+  "dgSpecHash": "MW9rPfew9sY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\breno\\Source\\Repos\\PI_EsperancaSobreRodas\\back\\EsperancaSobreRodasAPI\\EsperancaSobreRodasAPI.csproj",
+  "projectFilePath": "C:\\Users\\breno\\source\\repos\\PI_EsperancaSobreRodas\\back\\EsperancaSobreRodasAPI\\EsperancaSobreRodasAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\breno\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\breno\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
