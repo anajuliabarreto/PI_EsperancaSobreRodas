@@ -1,9 +1,4 @@
-﻿using EsperancaSobreRodasAPI.Data;
-using EsperancaSobreRodasAPI.Models;
-using EsperancaSobreRodasAPI.Repositories.Interface;
-using Microsoft.EntityFrameworkCore;
-
-namespace EsperancaSobreRodasAPI.Repositories
+﻿namespace EsperancaSobreRodasAPI.Repositories
 {
     public class MotoristaRepository : IMotoristaRepository
     {
@@ -17,10 +12,12 @@ namespace EsperancaSobreRodasAPI.Repositories
         {
             return await _dbContext.Motoristas.FirstOrDefaultAsync(x => x.Id == id);
         }
+
         public async Task<List<MotoristaModel>> BuscarTodosMotoristas()
         {
             return await _dbContext.Motoristas.ToListAsync();
         }
+
         public async Task<MotoristaModel> Cadastrar(MotoristaModel motorista)
         {
             await _dbContext.Motoristas.AddAsync(motorista);
