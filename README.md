@@ -22,3 +22,19 @@ seja possível a realização dos testes:
 6. Coloque a API para rodar;
 7. Abra o arquivo da aplicação do front com o Open with Live Server;
 8. Acesse a aplicação pelo navegador e faça o teste com as informações. 
+
+#Como iniciar o projeto:
+
+Backend
+1. Abrir visual studio 
+2. Abrir solução -> ir ate a pasta que vc tem a .sln 
+esperancasobrerodasAPI.sln
+3. Abrir terminal (certifique-se de estar na pasta que tem o docker-compose.yml)
+4. Digite o comando docker compose up
+5. Iniciar o back
+
+Frontend
+1. Abrir o  VSCODE
+2. Clica em abrir pasta
+3. Vai ate a pasta do front 
+4. Iniciar o front em live
